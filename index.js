@@ -5,6 +5,8 @@ const strictEquals = function (a, b) {
     return false;
   } else if (Object.is(a, b)) {
     return true;
+  } else if (!a && !b & !Object.is(a, false) & !Object.is(b, false)) {
+    return true;
   }
   return "false";
 };
