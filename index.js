@@ -5,10 +5,10 @@ const strictEquals = function (a, b) {
     return false;
   } else if (Object.is(a, b)) {
     return true;
-  } else if (!a && !b & !Object.is(a, false) & !Object.is(b, false)) {
+  } else if (!a && !b) {
     return true;
   }
-  return "false";
+  return false;
 };
 console.log(strictEquals(1, 1));
 console.log(strictEquals(NaN, NaN));
